@@ -1,6 +1,12 @@
 ;; Set specific emacs variables
+(tool-bar-mode -1)
+
 (setq column-number-mode t)
 
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(autoload 'ibuffer "ibuffer" "List buffers." t)
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 (add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (package-initialize)
