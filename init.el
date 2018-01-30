@@ -1,15 +1,23 @@
 ;; Set specific emacs variables
 (tool-bar-mode -1)
-
 (setq column-number-mode t)
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
+;; Setup load path and theme paths
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(package-initialize)
+;(package-initialize)
+
+;; Launch some packages on startup after init using hooks
+(add-hook 'emacs-startup-hook (lambda () (sr-speedbar-open)))
+
+;; Custom Packages
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -38,7 +46,10 @@
      (object :foreground "#5974ab" :slant italic)
      (package :foreground "#000000")
      (deprecated :strike-through "#000000"))))
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(sr-speedbar-default-width 15)
+ '(sr-speedbar-max-width 30)
+ '(sr-speedbar-right-side t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
