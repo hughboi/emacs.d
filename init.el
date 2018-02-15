@@ -8,22 +8,30 @@
 ;; Setup load path and theme paths
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(package-initialize)
+
+;; Enable full screen mode on startup
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; elisp directory for custom files
 (add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
+
+;; add the place where themes are installed to path for lookup
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;(package-initialize)
 
 ;; Launch some packages on startup after init using hooks
 (add-hook 'emacs-startup-hook (lambda () (sr-speedbar-open)))
+(add-hook 'emacs-startup-hook (lambda () (auto-complete-mode)))
 
 ;; Custom Packages
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (github-modern)))
+ '(ansi-color-names-vector
+   ["#ffffff" "#032f62" "#6a737d" "#d73a49" "#6a737d" "#6a737d" "#6f42c1" "#6a737d"])
+ '(custom-enabled-themes (quote (intellij)))
  '(custom-safe-themes
    (quote
     ("696171d66b2f152e9d71755be171a6d9ac3be0b0d3deb7d8cbf2dd6132306638" "e3fc83cdb5f9db0d0df205f5da89af76feda8c56d79a653a5d092c82c7447e02" default)))
@@ -46,10 +54,37 @@
      (object :foreground "#5974ab" :slant italic)
      (package :foreground "#000000")
      (deprecated :strike-through "#000000"))))
+ '(fci-rule-color "#6a737d")
  '(inhibit-startup-screen t)
+ '(nrepl-message-colors
+   (quote
+    ("#032f62" "#6a737d" "#d73a49" "#6a737d" "#005cc5" "#6f42c1" "#d73a49" "#6a737d")))
+ '(pdf-view-midnight-colors (quote ("#6a737d" . "#fffbdd")))
  '(sr-speedbar-default-width 15)
  '(sr-speedbar-max-width 30)
- '(sr-speedbar-right-side t))
+ '(sr-speedbar-right-side t)
+ '(vc-annotate-background "#3390ff")
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#6a737d")
+     (40 . "#032f62")
+     (60 . "#6a737d")
+     (80 . "#6a737d")
+     (100 . "#6a737d")
+     (120 . "#d73a49")
+     (140 . "#6a737d")
+     (160 . "#6a737d")
+     (180 . "#6a737d")
+     (200 . "#6a737d")
+     (220 . "#22863a")
+     (240 . "#005cc5")
+     (260 . "#6f42c1")
+     (280 . "#6a737d")
+     (300 . "#005cc5")
+     (320 . "#6a737d")
+     (340 . "#d73a49")
+     (360 . "#6a737d"))))
+ '(vc-annotate-very-old-color "#6a737d"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
