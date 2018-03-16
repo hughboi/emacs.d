@@ -38,15 +38,15 @@
  '(ensime-sem-high-faces
    (quote
     ((var :foreground "#000000" :underline
-	  (:style wave :color "yellow"))
+          (:style wave :color "yellow"))
      (val :foreground "#000000")
      (varField :foreground "#600e7a" :slant italic)
      (valField :foreground "#600e7a" :slant italic)
      (functionCall :foreground "#000000" :slant italic)
      (implicitConversion :underline
-			 (:color "#c0c0c0"))
+                         (:color "#c0c0c0"))
      (implicitParams :underline
-		     (:color "#c0c0c0"))
+                     (:color "#c0c0c0"))
      (operator :foreground "#000080")
      (param :foreground "#000000")
      (class :foreground "#20999d")
@@ -55,6 +55,7 @@
      (package :foreground "#000000")
      (deprecated :strike-through "#000000"))))
  '(fci-rule-color "#6a737d")
+ '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(nrepl-message-colors
    (quote
