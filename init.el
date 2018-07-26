@@ -31,10 +31,10 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#ffffff" "#032f62" "#6a737d" "#d73a49" "#6a737d" "#6a737d" "#6f42c1" "#6a737d"])
- '(custom-enabled-themes (quote (intellij)))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-eighties)))
  '(custom-safe-themes
    (quote
-    ("696171d66b2f152e9d71755be171a6d9ac3be0b0d3deb7d8cbf2dd6132306638" "e3fc83cdb5f9db0d0df205f5da89af76feda8c56d79a653a5d092c82c7447e02" default)))
+    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "eea01f540a0f3bc7c755410ea146943688c4e29bea74a29568635670ab22f9bc" "696171d66b2f152e9d71755be171a6d9ac3be0b0d3deb7d8cbf2dd6132306638" "e3fc83cdb5f9db0d0df205f5da89af76feda8c56d79a653a5d092c82c7447e02" default)))
  '(ensime-sem-high-faces
    (quote
     ((var :foreground "#000000" :underline
